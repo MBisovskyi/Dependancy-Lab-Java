@@ -4,13 +4,17 @@ public class Robot {
 
     // Instance variables (HAS A)
     public String name;
-    public String weaponName;
-    public int weaponPower;
+    public Weapon weapon;
 
     // Constructor
     public Robot() {
         this.name = "RoboNick";
-        this.weaponName = "Laser Saw";
-        this.weaponPower = 50;
+        this.weapon = new Weapon("Laser Saw", 50);
     }
+
+    //Method (CAN DO)
+    public void Attack(){
+        System.out.println(this.name + " attacks with their " + this.weapon.name + " for " + this.weapon.power + " damage!");
+    }
+
 }
