@@ -26,7 +26,7 @@ public class Fleet {
 
     // Can DO
     public String getFleetName() {
-        System.out.println("Give a name to this fleet: ");
+        System.out.println("Enter Fleet name: ");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }

@@ -18,7 +18,7 @@ public class Herd {
 
     // Can DO
     public String getHerdName(){
-        System.out.println("Give a name to this herd: ");
+        System.out.println("Enter Herd name: ");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
