@@ -1,7 +1,10 @@
 package org.example;
+import java.util.Random;
 
-public class Lasersaw extends Weapon{
+public class Lasersaw extends Weapon {
+
+
     public Lasersaw(){
-        super("Laser Saw", 60);
+        super("Laser Saw", (int)Math.floor(Math.random()*(65-35+1)+35));
     }
 }

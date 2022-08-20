@@ -1,12 +1,15 @@
 package org.example;
+import java.util.Random;
 
 public class Dino implements Attacker{
     public String name;
     public int attackPower;
+    public int health;
 
-    public Dino(String name, int attackPower) {
+    public Dino(String name) {
         this.name = name;
-        this.attackPower = attackPower;
+        this.attackPower = (int)Math.floor(Math.random()*(50-25+1)+25);
+        this.health = 150;
     }
 
     @Override
