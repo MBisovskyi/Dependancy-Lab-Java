@@ -8,6 +8,7 @@ public class Battlefield {
     Fleet fleet = new Fleet();
     String herdName = herd.getHerdName();
     String fleetName = fleet.getFleetName();
+    int roundNum = 1;
     boolean gameOver = false;
 
 
@@ -20,17 +21,21 @@ public class Battlefield {
 
     public void runRound(){
         do {
+            displayRoundNum(roundNum);
+            roundNum += 1;
             herd.dinos.get(0).Attack();
-            fleet.robots.get(0).health -= herd.dinos.get(0).attackPower;
-            System.out.println("\n" + fleet.robots.get(0).name + " was attacked by " + herd.dinos.get(0).name + " and has " + fleet.robots.get(0).health + " health remaining!");
+            fleet.robots.get(0).health -= herd.dinos.get(0).attackPower + herd.dinos.get(0).penetration - (fleet.robots.get(0).armor.defence / 2);
+            if(fleet.robots.get(0).health <= 0){fleet.robots.get(0).health = 0;};
+            System.out.println(fleet.robots.get(0).name + " was attacked by " + herd.dinos.get(0).name + " and has " + fleet.robots.get(0).health + " health remaining!");
             checkIfKilled(fleet, herd);
             if(gameOver = checkWinner(herd, fleet) == true){
                 System.out.println("\n" + herdName.toUpperCase() + " are the winners!\n" + "This battle is over, but a war is not!");
                 break;
             }
             fleet.robots.get(0).Attack();
-            herd.dinos.get(0).health -= fleet.robots.get(0).weapon.power;
-            System.out.println("\n" + herd.dinos.get(0).name + " was attacked by " + fleet.robots.get(0).name + " and has " + herd.dinos.get(0).health + " health remaining!\n");
+            herd.dinos.get(0).health -= fleet.robots.get(0).weapon.power + fleet.robots.get(0).weapon.penetration - herd.dinos.get(0).skinThickness;
+            if(herd.dinos.get(0).health <= 0){herd.dinos.get(0).health = 0;};
+            System.out.println(herd.dinos.get(0).name + " was attacked by " + fleet.robots.get(0).name + " and has " + herd.dinos.get(0).health + " health remaining!\n");
             checkIfKilled(fleet, herd);
             if(gameOver = checkWinner(herd, fleet) == true){
                 System.out.println("\n" + fleetName.toUpperCase() + " are the winners!\n" + "This battle is over, but a war is not!");
@@ -55,7 +60,6 @@ public class Battlefield {
             String keyEnter = scanner.nextLine();
             if(keyEnter.equals("")){
                 nextRound = true;
-                System.out.println("Next Round starts right now!\n");
             } else {
                 nextRound = false;
             }
@@ -68,7 +72,7 @@ public class Battlefield {
             System.out.println(fleet.robots.get(0).name + " was killed by " + herd.dinos.get(0).name + "!");
             fleet.robots.remove(0);
             if(fleet.robots.isEmpty() == false){
-                System.out.println(fleet.robots.get(0).name + " takes his place on the battlefield!\n");
+                System.out.println(fleet.robots.get(0).name + " takes his place on the battlefield!");
             }
         } else if (herd.dinos.get(0).health <= 0){
             System.out.println(herd.dinos.get(0).name + " was smashed by " + fleet.robots.get(0).name + " with " + fleet.robots.get(0).weapon.name + "!");
@@ -85,6 +89,10 @@ public class Battlefield {
             isWinner = true;
         }
         return isWinner;
+    }
+
+    public void displayRoundNum(int roundNum){
+        System.out.println("    Round ".toUpperCase() + roundNum + "\n");
     }
 
 }
