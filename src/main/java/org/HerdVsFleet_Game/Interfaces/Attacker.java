@@ -1,4 +1,4 @@
-package org.example.HerdVsFleet.Interfaces;
+package org.HerdVsFleet_Game.Interfaces;
 
 public interface Attacker {
     void Attack();

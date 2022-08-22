@@ -1,4 +1,4 @@
-package org.example.HerdVsFleet.Weapon;
+package org.HerdVsFleet_Game.Weapon;
 
 public class LightSabre extends Weapon{
     public LightSabre() {

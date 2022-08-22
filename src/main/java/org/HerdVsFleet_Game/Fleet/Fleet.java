@@ -1,10 +1,10 @@
-package org.example.HerdVsFleet.Fleet;
-import org.example.HerdVsFleet.Armor.Armor;
-import org.example.HerdVsFleet.Armor.HeavyArmor;
-import org.example.HerdVsFleet.Armor.LightArmor;
-import org.example.HerdVsFleet.Armor.MediumArmor;
-import org.example.HerdVsFleet.Weapon.*;
-import org.example.HerdVsFleet.Robot.Robot;
+package org.HerdVsFleet_Game.Fleet;
+import org.HerdVsFleet_Game.Armor.LightArmor;
+import org.HerdVsFleet_Game.Armor.MediumArmor;
+import org.HerdVsFleet_Game.Armor.Armor;
+import org.HerdVsFleet_Game.Armor.HeavyArmor;
+import org.HerdVsFleet_Game.Robot.Robot;
+import org.HerdVsFleet_Game.Weapon.*;
 
 import java.util.ArrayList;
 import java.util.Random;

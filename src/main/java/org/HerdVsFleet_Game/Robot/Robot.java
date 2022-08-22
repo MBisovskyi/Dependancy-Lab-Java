@@ -1,8 +1,8 @@
-package org.example.HerdVsFleet.Robot;
+package org.HerdVsFleet_Game.Robot;
 
-import org.example.HerdVsFleet.Armor.Armor;
-import org.example.HerdVsFleet.Interfaces.Attacker;
-import org.example.HerdVsFleet.Weapon.Weapon;
+import org.HerdVsFleet_Game.Armor.Armor;
+import org.HerdVsFleet_Game.Interfaces.Attacker;
+import org.HerdVsFleet_Game.Weapon.Weapon;
 
 public class Robot implements Attacker {
 

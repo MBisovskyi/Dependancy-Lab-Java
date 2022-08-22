@@ -1,6 +1,6 @@
-package org.example.HerdVsFleet.Dino;
+package org.HerdVsFleet_Game.Dino;
 
-import org.example.HerdVsFleet.Interfaces.Attacker;
+import org.HerdVsFleet_Game.Interfaces.Attacker;
 
 public class Dino implements Attacker {
     public String name;
@@ -12,7 +12,7 @@ public class Dino implements Attacker {
     public Dino(String name) {
         this.name = name;
         this.attackPower = (int)Math.floor(Math.random()*(50-25+1)+25);
-        this.health = (int)Math.floor(Math.random()*(185-155+1)+155);
+        this.health = (int)Math.floor(Math.random()*(185-160+1)+160);
         this.skinThickness = (int)Math.floor(Math.random()*(30-10+1)+10);
         this.penetration = (int)Math.floor(Math.random()*(20-10+1)+10);
     }

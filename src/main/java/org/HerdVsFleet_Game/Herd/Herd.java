@@ -1,6 +1,6 @@
-package org.example.HerdVsFleet.Herd;
+package org.HerdVsFleet_Game.Herd;
 
-import org.example.HerdVsFleet.Dino.Dino;
+import org.HerdVsFleet_Game.Dino.Dino;
 
 import java.util.ArrayList;
 import java.util.Scanner;

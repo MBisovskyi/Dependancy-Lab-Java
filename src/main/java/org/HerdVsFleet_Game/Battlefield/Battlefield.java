@@ -1,6 +1,6 @@
-package org.example.HerdVsFleet.Battlefield;
-import org.example.HerdVsFleet.Fleet.Fleet;
-import org.example.HerdVsFleet.Herd.Herd;
+package org.HerdVsFleet_Game.Battlefield;
+import org.HerdVsFleet_Game.Fleet.Fleet;
+import org.HerdVsFleet_Game.Herd.Herd;
 
 import java.util.Scanner;
 

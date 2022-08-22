@@ -1,4 +1,4 @@
-package org.example.HerdVsFleet.Armor;
+package org.HerdVsFleet_Game.Armor;
 
 public class LightArmor extends Armor{
     public LightArmor() {
