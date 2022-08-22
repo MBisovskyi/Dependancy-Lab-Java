@@ -1,4 +1,11 @@
-package org.example;
+package org.example.HerdVsFleet.Fleet;
+import org.example.HerdVsFleet.Armor.Armor;
+import org.example.HerdVsFleet.Armor.HeavyArmor;
+import org.example.HerdVsFleet.Armor.LightArmor;
+import org.example.HerdVsFleet.Armor.MediumArmor;
+import org.example.HerdVsFleet.Weapon.*;
+import org.example.HerdVsFleet.Robot.Robot;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;

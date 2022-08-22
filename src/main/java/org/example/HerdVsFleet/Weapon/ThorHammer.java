@@ -1,4 +1,4 @@
-package org.example;
+package org.example.HerdVsFleet.Weapon;
 
 public class ThorHammer extends Weapon{
     public ThorHammer() {

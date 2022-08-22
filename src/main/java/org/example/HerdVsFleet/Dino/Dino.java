@@ -1,6 +1,8 @@
-package org.example;
+package org.example.HerdVsFleet.Dino;
 
-public class Dino implements Attacker{
+import org.example.HerdVsFleet.Interfaces.Attacker;
+
+public class Dino implements Attacker {
     public String name;
     public int attackPower;
     public int health;

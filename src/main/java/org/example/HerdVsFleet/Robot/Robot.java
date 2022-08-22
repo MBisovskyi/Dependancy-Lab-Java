@@ -1,6 +1,10 @@
-package org.example;
+package org.example.HerdVsFleet.Robot;
 
-public class Robot implements Attacker{
+import org.example.HerdVsFleet.Armor.Armor;
+import org.example.HerdVsFleet.Interfaces.Attacker;
+import org.example.HerdVsFleet.Weapon.Weapon;
+
+public class Robot implements Attacker {
 
     // Instance variables (HAS A)
     public String name;

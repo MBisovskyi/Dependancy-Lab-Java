@@ -1,7 +1,8 @@
-package org.example;
+package org.example.HerdVsFleet.Battlefield;
+import org.example.HerdVsFleet.Fleet.Fleet;
+import org.example.HerdVsFleet.Herd.Herd;
+
 import java.util.Scanner;
-import java.awt.event.KeyEvent;
-import java.util.EventListener;
 
 public class Battlefield {
     Herd herd = new Herd();

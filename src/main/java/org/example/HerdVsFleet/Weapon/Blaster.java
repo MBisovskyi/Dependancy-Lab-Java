@@ -1,4 +1,4 @@
-package org.example;
+package org.example.HerdVsFleet.Weapon;
 
 public class Blaster extends Weapon {
 

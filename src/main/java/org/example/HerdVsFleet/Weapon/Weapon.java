@@ -1,4 +1,4 @@
-package org.example;
+package org.example.HerdVsFleet.Weapon;
 
 public abstract class Weapon {
     // Instance variables (HAS A)
