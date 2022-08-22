@@ -1,5 +1,6 @@
 package org.example;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Fleet {
@@ -16,6 +17,9 @@ public class Fleet {
         this.weapon.add(new Lasersaw());
         this.weapon.add(new Blaster());
         this.weapon.add(new Railgun());
+        this.weapon.add(new ThorHammer());
+        this.weapon.add(new LightSabre());
+        this.weapon.add(new SpikeGloves());
 
         // Instantiate Armor
         this.armor.add(new HeavyArmor());
@@ -23,10 +27,9 @@ public class Fleet {
         this.armor.add(new LightArmor());
 
         // Instantiate Robots
-        this.robots.add(new Robot("W240", this.weapon.get(0), this.armor.get(0)));
-        this.robots.add(new Robot("Dibidibu", this.weapon.get(1), this.armor.get(1)));
-        this.robots.add(new Robot("Scrch", this.weapon.get(2), this.armor.get(2)));
-
+        this.robots.add(new Robot("W240", getRandomWeapon(this.weapon), getRandomArmor(this.armor)));
+        this.robots.add(new Robot("Dibidibu", getRandomWeapon(this.weapon), getRandomArmor(this.armor)));
+        this.robots.add(new Robot("Scrch", getRandomWeapon(this.weapon), getRandomArmor(this.armor)));
 
     }
 
@@ -35,5 +38,19 @@ public class Fleet {
         System.out.println("Enter Fleet name: ");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
+    }
+
+    public Weapon getRandomWeapon(ArrayList<Weapon> weapon){
+        Random index = new Random();
+        Weapon randomWeapon = weapon.get(index.nextInt(weapon.size()));
+        weapon.remove(randomWeapon);
+        return  randomWeapon;
+    }
+
+    public Armor getRandomArmor(ArrayList<Armor> armor){
+        Random index = new Random();
+        Armor randomArmor = armor.get(index.nextInt(armor.size()));
+        armor.remove(randomArmor);
+        return randomArmor;
     }
 }

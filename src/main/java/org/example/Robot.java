@@ -18,7 +18,6 @@ public class Robot implements Attacker{
     }
     //Method (CAN DO)
     public void Attack(){
-        System.out.println("\n" + this.name + " attacks with " + this.weapon.name + "!");
-    }
+        System.out.println("\n" + this.name + " attacks with " + this.weapon.name + "!");}
 
 }

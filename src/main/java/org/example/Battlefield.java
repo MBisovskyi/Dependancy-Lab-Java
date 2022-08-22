@@ -14,6 +14,7 @@ public class Battlefield {
 
     // Can DO
     public void runBattle(){
+        displayNames();
         printTeamsNames();
         runRound();
 
@@ -93,6 +94,15 @@ public class Battlefield {
 
     public void displayRoundNum(int roundNum){
         System.out.println("    Round ".toUpperCase() + roundNum + "\n");
+    }
+
+    public void displayNames(){
+        System.out.println("Dino: " + herd.dinos.get(0).name + ".");
+        System.out.println("Dino: " + herd.dinos.get(1).name + ".");
+        System.out.println("Dino: " + herd.dinos.get(2).name + ".");
+        System.out.println("Robot: " + fleet.robots.get(0).name + " (Weapon: " + fleet.robots.get(0).weapon.name + "), " + fleet.robots.get(0).armor.name);
+        System.out.println("Robot: " + fleet.robots.get(1).name + " (Weapon: " + fleet.robots.get(1).weapon.name + "), " + fleet.robots.get(1).armor.name);
+        System.out.println("Robot: " + fleet.robots.get(2).name + " (Weapon: " + fleet.robots.get(2).weapon.name + "), " + fleet.robots.get(2).armor.name);
     }
 
 }

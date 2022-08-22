@@ -10,13 +10,15 @@ public class Dino implements Attacker{
     public Dino(String name) {
         this.name = name;
         this.attackPower = (int)Math.floor(Math.random()*(50-25+1)+25);
-        this.health = 200;
-        this.skinThickness = 16;
-        this.penetration = 12;
+        this.health = (int)Math.floor(Math.random()*(185-155+1)+155);
+        this.skinThickness = (int)Math.floor(Math.random()*(30-10+1)+10);
+        this.penetration = (int)Math.floor(Math.random()*(20-10+1)+10);
     }
 
     @Override
     public void Attack() {
         System.out.println(this.name + " attacks!");
     }
+
+
 }
